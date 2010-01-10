@@ -5,7 +5,8 @@ It’s cool, and shit.
 I really couldn’t stand the CommonJS `require()` implementation that started
 shipping with Node as of [v0.1.16][api-change]. So, I sat down to design, and
 later (when it was [met by deaf ears][commonjs-thread]), implement, a
-replacement. This is that.
+replacement. This is that; originally implemented as a part of
+[`poopy.js`][poopy], `from` has now split off into its own project.
 
 The `from` system supports Python-style ‘index’ files for packages, as well as
 an analogue to Python’s `import … from` feature. `from` also features Ruby-
@@ -15,6 +16,7 @@ seen in any other `require()`-esque system to date.
 
   [api-change]: http://github.com/ry/node/blob/master/ChangeLog#L166-182 "ChangeLog for Node.js v0.1.16"
   [commonjs-thread]: http://groups.google.com/group/commonjs/browse_thread/thread/9a17690dd164281f "CommonJS mailing list thread on my original design for `acquire()`"
+  [poopy]: http://github.com/elliottcable/poopy.js#readme "The poopy.js project/contract"
 
 Usage
 -----
