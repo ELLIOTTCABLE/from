@@ -118,7 +118,7 @@ packages (and the packages themselves) to be structured, and what it supports;
 you can read [`STRUCTURE.markdown`][STRUCTURE] for more information on that
 topic than will be presented here.
 
-  [STRUCTURE]: ./blob/Master/STRUCTURE.markdown "A detailed description of library structure for library authors"
+  [STRUCTURE]: ./from/blob/Master/STRUCTURE.markdown "A detailed description of library structure for library authors"
 
 ### ’portin’
 `from` supports moving objects back and forth between the compilation units of
