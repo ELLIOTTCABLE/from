@@ -19,3 +19,24 @@ test(function($){ var runInNewContext = From.plumbing.runInNewContext
    $.equal(typeof runInNewContext('Function'), 'function')
    $.notStrictEqual(runInNewContext('Function'), Function)
 $.end() })
+
+test(function($){ var sub = OTHER.sub, fanction
+ , Fanction = sub(Function
+    , function(stuff){ this.stuff = stuff }
+    , function(nonsense){ return nonsense + ', wotcher!' })
+   
+   $.equal(typeof Fanction, 'function')
+   $.notStrictEqual(Fanction, Function)
+   
+   fanction = new Fanction('foo')
+   $.ok(   fanction instanceof Fanction)
+   if (OTHER.hasPrototypeAccessors) {
+      $.ok(fanction instanceof Function)
+      $.ok(fanction instanceof Object) }
+   $.strictEqual(fanction.stuff, 'foo')
+   $.strictEqual(fanction('bar'), 'bar, wotcher!')
+   
+   Fanction.prototype.stufficate = function(){ this.stuff = this.stuff + this.stuff }
+   $.doesNotThrow(function(){ fanction.stufficate() })
+   $.strictEqual(fanction.stuff, 'foofoo')
+$.end() })
