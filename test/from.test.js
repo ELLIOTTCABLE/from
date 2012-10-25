@@ -12,10 +12,10 @@ var test = function(test){
    if (testling) testling(function(assert){ test(assert) })
                                      else { test(assert) } }
 
-test(function(assert){ var runInNewContext = From.plumbing.runInNewContext
-   assert.doesNotThrow(function(){ runInNewContext('true') })
-   assert.doesNotThrow(function(){ runInNewContext('Function') })
-   assert.ok(runInNewContext('2') === 2)
-   assert.ok(typeof runInNewContext('Function') === 'function')
-   assert.ok(runInNewContext('Function') !== Function)
-   assert.end() })
+test(function($){ var runInNewContext = From.plumbing.runInNewContext
+   $.doesNotThrow(function(){ runInNewContext('true') })
+   $.doesNotThrow(function(){ runInNewContext('Function') })
+   $.strictEqual(runInNewContext('2'), 2)
+   $.equal(typeof runInNewContext('Function'), 'function')
+   $.notStrictEqual(runInNewContext('Function'), Function)
+$.end() })
