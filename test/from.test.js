@@ -17,6 +17,7 @@ test(function($){ var runInNewContext = From.plumbing.runInNewContext
    $.doesNotThrow(function(){ runInNewContext('Function') })
    $.strictEqual(runInNewContext('2'), 2)
    $.equal(typeof runInNewContext('Function'), 'function')
+   // FIXME: The following test currently fails on Testling, for reasons unknown.
    $.notStrictEqual(runInNewContext('Function'), Function)
 $.end() })
 
