@@ -19,6 +19,12 @@ test(function($){ var runInNewContext = From.plumbing.runInNewContext
    $.equal(typeof runInNewContext('Function'), 'function')
    // FIXME: The following test currently fails on Testling, for reasons unknown.
    $.notEqual(runInNewContext('Function'), Function)
+   
+   var sandbox = {foo: 123}
+   $.equal(runInNewContext('(function(){ return foo })()', sandbox), 123)
+   
+   runInNewContext('(function(){ foo = 456 })()', sandbox)
+   $.equal(sandbox.foo, 456)
 $.end() })
 
 test(function($){ var subclass = OTHER.subclass, fanction
