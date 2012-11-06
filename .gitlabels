@@ -1,0 +1,26 @@
+# (What is this? Read the .gitlabels README: http://ell.io/.gitlabels)
+
+# ... at least one of the following four should apply to every commit:
+- (new:<issue>)† indicates new functionality, features, documentation, et cetera are introduced in this commit [optionally includes related issue ID]
+- (API)† indicates this commit modifies existing (usually documented) APIs in some way
+- (fix:<issue>)† indicates changes that fix outstanding bugs or problems in some way [optionally includes issue ID]
+- (refactor)† indicates changes that subtly change things for the better, possibly without changing the actual effect of any code (short for ‘refactor’)
+# (note: (fix), (api), and (new) *change how things operate* from the viewpoint of an API consumer or
+#        extension developer (when not combined with a form of (noop)), whereas (re) causes no
+#        operational changes (from said point of view), instead improving the overall quality of the
+#        code in some way, such as causing it to execute faster or require fewer resources.)
+
+
+- (-) indicates a relatively minor or unimportant commit, worthy of being ignored by most interested parties
+- (incomplete) indicates a (rare!) commit that applies code that doesn't compile, or is otherwise ‘broken,’ to be fixed later
+   - (harm) indicates an (even rarer!) commit that is known (at the time of committing) to *break* parts of the codebase that previously worked
+- (complete:<commit>) indicates that this commit completes the work introduced or begun in another (incomplete) or (harm) <commit>
+# (note: it’s *never* safe to check-out and compile code between an (incomplete) (or (harm)) commit,
+#        and its corresponding (complete:) commit!)
+
+- (plumbing) indicates that a commit doesn't (directly, at least) modify any elements of the *published* API, only internal support code
+- (tests) indicates a commit that does *not* modify any implementation code, in any way (instead, indicates modifying code in the test suite)
+   - (no-op) as (tests), except indicates that a commit does not modify any code belonging to the test suite either
+      - (style) indicates a commit that only changes alignment/spacing/visual orientation of code or documentation
+      - (doc) indicates commits that change commentary, documentation, etc (exclusive of actual *executed* code)
+         - (meta) indicates meta-project changes, not applying to the codebase

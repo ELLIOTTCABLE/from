@@ -1,0 +1,27 @@
+{     "author" : "elliottcable (http://ell.io/tt)"
+   
+,       "name" : "from"
+,    "private" :  true
+,    "version" : "0.0.4"
+   
+,   "homepage" : "http://ell.io/$from"
+, "repository" :{"type":"git", "url":"git://github.com/elliottcable/from.git"}
+,       "bugs" : "https://github.com/elliottcable/from/issues"
+   
+,       "main" : "lib/from"
+,    "scripts" :{"test":"grunt test"}
+   
+,          "engines" :{"node":"~0.8.0"}
+,  "devDependencies" :{"grunt"                  : " ~ 0. 4. 0a"
+                     , "grunt-contrib-concat"   : " ~ 0. 1. 0"
+                     , "grunt-contrib-jshint"   : " ~ 0. 1. 0"
+                     , "grunt-contrib-watch"    : " ~ 0. 1. 4"
+                     , "grunt-contrib-clean"    : " ~ 0. 4. 0a"
+                     , "testling"               : ">= 0. 2. 5"
+                                                                                                   }
+,   "description" : "a `require()` replacement (specifically, a “code acquisition system.”)"
+,      "keywords" :["development", "require", "acquire", "utility", "modules"
+                  , "requireJS", "commonJS", "r.js", "AMD", "UMD", "UMDjs"
+                  , "web", "browser", "client", "client-side", "front-end", "nodejs", "node"
+                  , "JavaScript", "bundle", "async", "asynch", "asynchronous"
+                                                                                                  ]}
