@@ -18,7 +18,7 @@ test(function($){ var runInNewContext = From.plumbing.runInNewContext
    $.strictEqual(runInNewContext('2'), 2)
    $.equal(typeof runInNewContext('Function'), 'function')
    // FIXME: The following test currently fails on Testling, for reasons unknown.
-   $.notStrictEqual(runInNewContext('Function'), Function)
+   $.notEqual(runInNewContext('Function'), Function)
 $.end() })
 
 test(function($){ var sub = OTHER.sub, fanction
@@ -27,7 +27,7 @@ test(function($){ var sub = OTHER.sub, fanction
     , function(nonsense){ return nonsense + ', wotcher!' })
    
    $.equal(typeof Fanction, 'function')
-   $.notStrictEqual(Fanction, Function)
+   $.notEqual(Fanction, Function)
    
    fanction = new Fanction('foo')
    $.ok(   fanction instanceof Fanction)
