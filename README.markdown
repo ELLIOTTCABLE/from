@@ -182,3 +182,11 @@ root user, but that’s even more painful.
 
 Hopefully, someday, we’ll have a friendly package management system to do this
 for us; today is not that day.
+
+License
+-------
+This project is released for public usage under the terms of the very-permissive [ISC license][] (a
+modern evolution of the MIT / BSD licenses); more information is available in [COPYING][].
+
+   [ISC license]: <http://choosealicense.com/licenses/isc/> "Information about the ISC license"
+   [COPYING]: <./COPYING.text>
